@@ -1,0 +1,383 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include adaptiveValue("min-height", 104, 64,0,1920,1366.98);
+  padding: toRem(10) 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  transition: min-height .7s ease;
+  &._header-scroll {
+    @media (min-width:toEm(1366.98)){
+      min-height: toRem(64) !important;
+    }
+  }
+  // .header__wrapper
+  &__wrapper {
+    @extend %wrapper;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(20);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 5;
+    img {
+      height: auto;
+      @include adaptiveValue("width", 260, 160,0,1920,1366.98);
+    }
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__block
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+  &__lng,
+  &__tel {
+    flex: 0 0 auto;
+    border-radius: toRem(14);
+    background-color: $gray;
+    font-weight: 500;
+    @include adaptiveValue("width", 60, 48,0,1920,1366.98);
+    @include adaptiveValue("height", 60, 48,0,1920,1366.98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // .header__lng
+  &__lng {
+    @extend %hover;
+    @media (max-width: toEm(768.98)) {
+      width: 100% !important;
+      height: toRem(60) !important;
+      margin-bottom: toRem(10);
+    }
+    @media (max-width: toEm(768.98)) and (min-width:toEm(480.98)) {
+      max-width: toRem(450);
+    }
+  }
+  // .header__tel
+  &__tel {
+    @extend %hover;
+    svg {
+      @include adaptiveValue("width", 26, 21,0,1920,1366.98);
+      @include adaptiveValue("height", 26, 21,0,1920,1366.98);
+    }
+  }
+  // .header__link
+  &__link {
+    text-wrap: nowrap;
+    @media (max-width: toEm(768.98)) and (min-width:$mobileSmall) {
+      max-width: toRem(450);
+    }
+  }
+}
+
+.menu {
+  // .menu__body
+  &__body {
+    @media (max-width: toEm(1320.98)) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			padding: toRem(64) toRem(20) toRem(20) toRem(30);
+			transition: left 0.3s;
+      display: flex;
+      flex-direction: column;
+      background-color:#fff;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: toRem(64);
+        background-color: #fff;
+				left: -100%;
+				top: 0;
+				transition: left 0.3s;
+				z-index: 2;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    @include adaptiveValue("column-gap", 30, 20,0,1920,1366.98);
+    @media (min-width:toEm(1320.98)){
+      align-items: center;
+    }
+    @media (max-width: toEm(1320.98)){
+      flex: 1;
+      padding-top: toRem(50);
+      flex-direction: column;
+      row-gap: toRem(20);
+      margin-bottom: toRem(20);
+      max-width: toRem(450);
+    }
+  }
+  // .menu__item
+  &__item {
+    &.has-sub-menu {
+      position: relative;
+      &._open {
+        .menu__link {
+          &::after {
+            transform: translate(0,-50%) rotate(180deg);
+          }
+        }
+      }
+      .menu__link {
+        &::after {
+          @media (min-width:toEm(1320.98)){
+              display: none;
+          }
+          @media (max-width: toEm(1320.98)){
+            content:'';
+            position: absolute;
+            top: 50%;
+            right: toRem(-40);
+            transform: translate(0,-50%);
+            background-image: url('../img/icons/arr-dwn-menu.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: toRem(30);
+            height: toRem(30);
+            transition: transform .2s ease;
+            transform-origin: 50% 50%;
+          }
+          @media (max-width:$mobileSmall){
+            width: toRem(26);
+            height: toRem(26);
+          }
+        }
+      }
+      &:hover {
+        .sub-menu {
+          opacity: 1;
+          pointer-events: all;
+          @media (max-width: em(1340.98)){
+            height: 100%;
+            transition: all .3s ease;
+          }
+        }
+        .sub-menu__list {
+          &::before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+          }
+        }
+        .sub-menu__link {
+          opacity: 1;
+        }
+        .menu__sub-link {
+          svg {
+            transform: rotate(-180deg);
+            path {
+              stroke: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .menu__link
+  &__link {
+    font-weight: 500;
+    &._active {
+      color: $blue;
+      &::before {
+        background-color:$blue;
+      }
+      &::after {
+        filter: invert(58%) sepia(33%) saturate(4185%) hue-rotate(186deg) brightness(101%) contrast(101%);
+      }
+    }
+    @include adaptiveValue("font-size", 16, 14,0,1920,1280.98);
+   
+    @media (max-width: toEm(1320.98)){
+        font-size: toRem(24) !important;
+        // display: block;
+    }
+    @media (max-width:$mobileSmall){
+       font-size: toRem(20) !important; 
+    }
+  }
+  // .menu__icon
+  &__icon {
+    @media (min-width:toEm(1320.98)){
+      display: none;
+    }
+    @media (max-width: toEm(1320.98)) {
+      flex: 0 0 auto;
+      width: toRem(40);
+      height: toRem(40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.menu__link,
+.sub-menu__link {
+  position: relative;
+  &::before {
+    @media (min-width:toEm(1320.98)){
+      content: '';
+      position: absolute;
+      bottom: toRem(-4);
+      left: 0;
+      width: 100%;
+      height: toRem(1);
+      background-color: $mainColor;
+      transform: scale(0, 1);
+      transform-origin: 100% 50%;
+      transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+  @media (any-hover: hover){
+    &:hover{
+      &::before {
+        transform: scale(1);
+        transform-origin: 0 50%;
+      }
+    }
+  }
+}
+
+.sub-menu {
+  @media (min-width:toEm(1320.98)){
+    padding-top: toRem(16);
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    left: toRem(-20);
+    transition: opacity .3s ease;
+  }
+  @media (max-width: toEm(1320.98)){
+    position: relative;
+    max-width: toRem(450);
+    left: 0;
+    transition: all .3s ease;
+  }
+  // .sub-menu__list
+  &__list {
+    padding: toRem(20);
+    position: relative;
+    transition: all .3s ease;
+    &::before {
+      @media (min-width:toEm(1320.98)){
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: toRem(20);
+        background-color: #FFF;
+        box-shadow: 0px 5px 30px 0px #D4E5F0;
+        width: 0;
+        height: 0;
+        transition: all .5s ease;
+        opacity: 0;
+      }
+      @media (max-width: toEm(1320.98)){
+          display: none;
+      }
+    }
+  }
+  // .sub-menu__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+    position: relative;
+    z-index: 2;
+  }
+  // .sub-menu__link
+  &__link {
+    font-weight: 500;
+    @media (min-width:toEm(1320.98)){
+      font-size: toRem(16);
+      transition: opacity .45s ease .25s;
+      opacity: 0;
+    }
+    @media (max-width: toEm(1320.98)){
+      font-size: toRem(18);
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+.icon-menu {
+	display: none;
+	@media (max-width: toEm(1320.98)) {
+    flex: 0 0 auto;
+		display: block;
+		position: relative;
+		width: toRem(24);
+		height: toRem(20);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(3);
+			background-color: #000;
+      border-radius: 3px;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+      width: 50%;
+			top: calc(50% - toRem(1.5));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1.5));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1.5));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	border-radius: toRem(18);
+	width: 100%;
+	height: toRem(70);
+	display: block;
+	background: #fff;
+	color: $mainColor;
+	font-size: toRem(16);
+	font-weight: 700;
+	outline: none;
+	@include adaptiveValue("padding-left", 30, 20,0,1920,1366.98);
+	@include adaptiveValue("padding-right", 30, 20,0,1920,1366.98);
+	&._form-focus {
+	}
+	&._form-error {
+	}
+	
+}
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+		color: $gray-87;
+		font-weight: 400;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+
+textarea.input {
+	resize: none;
+	min-height: toRem(140);
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

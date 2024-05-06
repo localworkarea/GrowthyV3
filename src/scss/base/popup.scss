@@ -1,0 +1,125 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #eee;
+	position: relative;
+	padding-top: toRem(50);
+	@include adaptiveValue("padding-bottom", 50, 20,0,1920,768.98);
+	@include adaptiveValue("padding-left", 95, 20,0,1920,768.98);
+	@include adaptiveValue("padding-right", 95, 20,0,1920,768.98);
+	width: 100%;
+	max-width: toRem(800);
+	border-radius: toRem(20);
+	.popup-thk & {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: toRem(560);
+	}
+	.lock & {
+		visibility: visible;
+	}
+}
+
+.popup {
+	// .popup__close
+	&__close {
+		position: absolute;
+		@media (min-width:$mobile){
+			top: toRem(20);
+			right: toRem(20);
+		}
+		@media (max-width:$mobile){
+			top: toRem(10);
+			right: toRem(10);
+		}
+		outline: none;
+	}
+}
+
+.popup {
+	// .popup__close
+	&__close {
+	}
+	// .popup__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 23, 30,0,1280,480);
+		text-align: center;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 36, 30,0,1280,480);
+	}
+	// .popup__form
+	&__form {
+		display: grid;
+		gap: toRem(10);
+	}
+	// .popup__item
+	&__item {
+		position: relative;
+	}
+	// .popup__input
+	&__input {
+	}
+	// .popup__items
+	&__items {
+		display: grid;
+		gap: toRem(10);
+		@media (min-width:$mobileSmall){
+			 grid-template-columns: repeat(2, 1fr); 
+		}
+	}
+	// .popup__button
+	&__button {
+	}
+
+}
