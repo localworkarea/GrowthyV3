@@ -2993,14 +2993,6 @@ PERFORMANCE OF THIS SOFTWARE.
             const copyLine2 = document.querySelector(".trust-brand__list-2").cloneNode(true);
             document.querySelector(".trust-brand__body_02").appendChild(copyLine2);
         }
-        const selectors = document.querySelectorAll('input[name="tel"]');
-        if (selectors.length > 0) selectors.forEach((function(selector) {
-            const im = new Inputmask({
-                mask: "+38 (099) 999-99-99",
-                clearMaskOnLostFocus: true
-            });
-            im.mask(selector);
-        }));
     }));
     window["FLS"] = false;
     addLoadedClass();

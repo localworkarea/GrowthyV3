@@ -91,16 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // ТЕЛЕФОННАЯ МАСКА ===================================================
-  const selectors = document.querySelectorAll('input[name="tel"]');
-  if (selectors.length > 0) {
-      selectors.forEach(function(selector) {
-          const im = new Inputmask({
-              mask: "+38 (099) 999-99-99",
-              clearMaskOnLostFocus: true,
-          });
-          im.mask(selector);
-      });
-  }
+  // const selectors = document.querySelectorAll('input[name="tel"]');
+  // if (selectors.length > 0) {
+  //     selectors.forEach(function(selector) {
+  //         const im = new Inputmask({
+  //             mask: "+38 (099) 999-99-99",
+  //             clearMaskOnLostFocus: true,
+  //         });
+  //         im.mask(selector);
+  //     });
+  // }
   // ==================================================================
 
 });
