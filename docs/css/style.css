@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700,800&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Inter:500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,700&display=swap);
 * {
   padding: 0;
   margin: 0;
@@ -2269,17 +2268,18 @@ body::after {
 .hero__container {
   position: relative;
   z-index: 2;
-  background-image: url(../img/elements/el-hero-op.webp);
   background-repeat: no-repeat;
   background-position: top
 }
 @media (min-width:30.06125em) {
   .hero__container {
+    background-image: url(../img/elements/el-hero-op.webp);
     background-size: 80%
   }
 }
 @media (max-width:30.06125em) {
   .hero__container {
+    background-image: url(../img/elements/el-hero-op-mob.webp);
     background-size: 120%
   }
 }

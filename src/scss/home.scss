@@ -6,14 +6,15 @@
   &__container {
     position: relative;
     z-index: 2;
-      background-image: url("../img/elements/el-hero-op.png");
-      background-repeat: no-repeat;
-      background-position: top;
-      @media (min-width:$mobileSmall){
+    background-repeat: no-repeat;
+    background-position: top;
+    @media (min-width:$mobileSmall){
+        background-image: url("../img/elements/el-hero-op.png");
         background-size: 80%;
       }
       @media (max-width:$mobileSmall){
-         background-size: 120%; 
+        background-image: url("../img/elements/el-hero-op-mob.png");
+        background-size: 120%; 
       }
   }
   // .hero__logo
