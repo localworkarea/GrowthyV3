@@ -2,21 +2,38 @@
   @include adaptiveValue("padding-top", 100, 60,2,1920,1366.98);
   @include adaptiveValue("padding-top", 60, 30,3,1366.98,480.98);
   @extend %pddBottom;
+  overflow: hidden;
   // .hero__container
   &__container {
     position: relative;
     z-index: 2;
-    background-repeat: no-repeat;
-    background-position: top;
-    @media (min-width:$mobileSmall){
-        background-image: url("../img/elements/el-hero-op.png");
-        background-size: 80%;
-      }
-      @media (max-width:$mobileSmall){
-        background-image: url("../img/elements/el-hero-op-mob.png");
-        background-size: 120%; 
-      }
+    // background-repeat: no-repeat;
+    // background-position: top;
+    // @media (min-width:$mobileSmall){
+    //     background-image: url("../img/elements/el-hero-op.png");
+    //     background-size: 80%;
+    //   }
+    //   @media (max-width:$mobileSmall){
+    //     background-image: url("../img/elements/el-hero-op-mob.png");
+    //     background-size: 120%; 
+    //   }
   }
+	// .hero__bg
+	&__bg {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    @media (min-width:$mobileSmall){
+      top: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 80%;
+    }
+    @media (max-width:$mobileSmall){
+      top: 16%;
+      width: 120%; 
+      transform: translate(-50%,-50%);
+    }
+	}
   // .hero__logo
   &__logo {
   }
@@ -639,30 +656,6 @@
   }
 }
 
-.start-form {
-  display: grid;
-  @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
-  @media (min-width:toEm(700.98)){
-    grid-template-columns: repeat(3,1fr);
-  }
-  // .start-form__item
-  &__item {
-    position: relative;
-    .form__error {
-      position: absolute;
-      top: 0;
-      right: toRem(16);
-      font-size: toRem(14);
-      color: red;
-    }
-  }
-  // .start-form__input
-  &__input {
-  }
-  // .start-form__btn
-  &__btn {
-  }
-}
 // =============================================================
 
 .hero-art {

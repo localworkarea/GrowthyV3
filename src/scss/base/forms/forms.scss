@@ -40,7 +40,64 @@ textarea {
 
 textarea.input {
 	resize: none;
-	min-height: toRem(140);
+	min-height: toRem(120);
+	padding-top: toRem(30);
+}
+
+form._sending {
+	button {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+}
+
+.form__error {
+	position: absolute;
+	top: 0;
+	right: toRem(16);
+	font-size: toRem(14);
+	color: red;
+}
+
+.start-form {
+  display: grid;
+  @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
+  @media (min-width:toEm(700.98)){
+    grid-template-columns: repeat(3,1fr);
+  }
+  // .start-form__item
+  &__item {
+    position: relative;
+  }
+  // .start-form__input
+  &__input {
+  }
+  // .start-form__btn
+  &__btn {
+  }
+}
+
+.form-popup {
+	display: grid;
+	gap: toRem(10);
+	// .form-popup__item
+	&__item {
+		position: relative;
+	}
+	// .form-popup__input
+	&__input {
+	}
+	// .form-popup__items
+	&__items {
+		display: grid;
+		gap: toRem(10);
+		@media (min-width:$mobileSmall){
+			 grid-template-columns: repeat(2, 1fr); 
+		}
+	}
+	// .form-popup__button
+	&__button {
+	}
 }
 
 //</FORM>

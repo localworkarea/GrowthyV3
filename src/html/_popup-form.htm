@@ -1,0 +1,32 @@
+<div id="popup-form" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content bg-blue">
+			<button data-close type="button" class="popup__close">
+				<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.73333 1.48883L21.5469 21.0288" stroke="#000000" stroke-linecap="square" />
+					<path d="M21.2667 1.48883L1.45309 21.0288" stroke="#000000" stroke-linecap="square" />
+				</svg>
+			</button>
+			<p class="popup__title">
+				Почати роботу з нами
+			</p>
+			<form data-dev data-popup-message="#popup-msg" class="form-popup" action="" method="POST">
+				<div class="form-popup__item">
+					<input type="text" name="name" placeholder="Введіть ваше ім’я"  data-error="Заповніть поле" data-required class="form-popup__input input">
+				</div>
+				<div class="form-popup__items">
+					<div class="form-popup__item">
+						<input type="email" name="email" placeholder="E-mail"  data-error="Заповніть поле" data-required class="form-popup__input input">
+					</div>
+					<div class="form-popup__item">
+						<input type="tel" name="tel" data-error="Заповніть поле" placeholder="+38 (0__) ___-__-__" data-required class="form-popup__input input">
+					</div>
+				</div>
+				<div class="form-popup__item">
+					<textarea name="comment" placeholder="Важливе питання, яке ти хотів би задати одразу" class="input"></textarea>
+				</div>
+				<button type="submit" class="form-popup__button btn btn--02"><span>Відправити</span></button>
+			</form>
+		</div>
+	</div>
+</div>

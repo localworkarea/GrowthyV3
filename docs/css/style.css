@@ -214,7 +214,68 @@ textarea {
 }
 textarea.input {
   resize: none;
-  min-height: 8.75rem
+  min-height: 7.5rem;
+  padding-top: 1.875rem
+}
+form._sending button {
+  pointer-events: none;
+  opacity: .5
+}
+.form__error {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: .875rem;
+  color: red
+}
+.start-form {
+  display: grid
+}
+@media (min-width:120em) {
+  .start-form {
+    gap: 1.25rem
+  }
+}
+@media (min-width:85.43625em) and (max-width:120em) {
+  @supports (gap:clamp(0.625rem ,-0.9199034393rem + 1.8082528661vw ,1.25rem)) {
+    .start-form {
+      gap: clamp(.625rem ,-.9199034393rem + 1.8082528661vw ,1.25rem)
+    }
+  }
+  @supports not (gap:clamp(0.625rem ,-0.9199034393rem + 1.8082528661vw ,1.25rem)) {
+    .start-form {
+      gap: calc(.625rem + .625 * (100vw - 85.43625rem)/ 34.56375)
+    }
+  }
+}
+@media (max-width:85.43625em) {
+  .start-form {
+    gap: .625rem
+  }
+}
+@media (min-width:43.81125em) {
+  .start-form {
+    grid-template-columns: repeat(3,1fr)
+  }
+}
+.start-form__item {
+  position: relative
+}
+.form-popup {
+  display: grid;
+  gap: .625rem
+}
+.form-popup__item {
+  position: relative
+}
+.form-popup__items {
+  display: grid;
+  gap: .625rem
+}
+@media (min-width:30.06125em) {
+  .form-popup__items {
+    grid-template-columns: repeat(2,1fr)
+  }
 }
 body::after {
   content: "";
@@ -232,17 +293,6 @@ body::after {
 .popup-show body::after {
   opacity: 1
 }
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 30px 10px;
-  transition: visibility .8s ease 0s;
-  visibility: hidden;
-  pointer-events: none
-}
 .popup_show {
   z-index: 150;
   visibility: visible;
@@ -251,8 +301,21 @@ body::after {
 }
 .popup_show .popup__content {
   visibility: visible;
-  -webkit-transform: scale(1);
-  transform: scale(1)
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  pointer-events: all
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1.875rem 1.25rem;
+  transition: visibility .8s ease 0s;
+  visibility: hidden;
+  pointer-events: none
 }
 .popup__wrapper {
   display: flex;
@@ -267,11 +330,12 @@ body::after {
 }
 .popup__content {
   visibility: hidden;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  transition: -webkit-transform .3s ease 0s;
-  transition: transform .3s ease 0s;
-  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
+  opacity: 0;
+  -webkit-transform: translateY(10%);
+  transform: translateY(10%);
+  transition: opacity .3s ease 0s,-webkit-transform .3s ease 0s;
+  transition: transform .3s ease 0s,opacity .3s ease 0s;
+  transition: transform .3s ease 0s,opacity .3s ease 0s,-webkit-transform .3s ease 0s;
   background-color: #eee;
   position: relative;
   padding-top: 3.125rem;
@@ -345,13 +409,6 @@ body::after {
     padding-right: 1.25rem
   }
 }
-.popup-thk .popup__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 35rem
-}
 .lock .popup__content {
   visibility: visible
 }
@@ -419,20 +476,33 @@ body::after {
     font-size: 1.875rem
   }
 }
-.popup__form {
-  display: grid;
-  gap: .625rem
+.popup-msg__body {
+  padding: 3.125rem 0
 }
-.popup__item {
-  position: relative
+.popup-msg__txt {
+  text-align: center;
+  color: #fff
 }
-.popup__items {
-  display: grid;
-  gap: .625rem
+@media (min-width:120em) {
+  .popup-msg__txt {
+    font-size: 2.5rem
+  }
 }
-@media (min-width:30.06125em) {
-  .popup__items {
-    grid-template-columns: repeat(2,1fr)
+@media (min-width:30.06125em) and (max-width:120em) {
+  @supports (font-size:clamp(1.75rem ,1.499318981rem + 0.8339008492vw ,2.5rem)) {
+    .popup-msg__txt {
+      font-size: clamp(1.75rem ,1.499318981rem + .8339008492vw ,2.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.75rem ,1.499318981rem + 0.8339008492vw ,2.5rem)) {
+    .popup-msg__txt {
+      font-size: calc(1.75rem + .75 * (100vw - 30.06125rem)/ 89.93875)
+    }
+  }
+}
+@media (max-width:30.06125em) {
+  .popup-msg__txt {
+    font-size: 1.75rem
   }
 }
 [data-showmore-button] span:last-child {
@@ -2231,6 +2301,9 @@ body::after {
     color: #fff
   }
 }
+.hero {
+  overflow: hidden
+}
 @media (min-width:120em) {
   .hero {
     padding-top: 6.25rem
@@ -2267,20 +2340,27 @@ body::after {
 }
 .hero__container {
   position: relative;
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-position: top
+  z-index: 2
+}
+.hero__bg {
+  position: absolute;
+  z-index: -1;
+  left: 50%
 }
 @media (min-width:30.06125em) {
-  .hero__container {
-    background-image: url(../img/elements/el-hero-op.webp);
-    background-size: 80%
+  .hero__bg {
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 80%
   }
 }
 @media (max-width:30.06125em) {
-  .hero__container {
-    background-image: url(../img/elements/el-hero-op-mob.webp);
-    background-size: 120%
+  .hero__bg {
+    top: 16%;
+    width: 120%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
   }
 }
 .hero__title {
@@ -4000,46 +4080,6 @@ body::after {
   .form-start__txt {
     max-width: 23.4375rem
   }
-}
-.start-form {
-  display: grid
-}
-@media (min-width:120em) {
-  .start-form {
-    gap: 1.25rem
-  }
-}
-@media (min-width:85.43625em) and (max-width:120em) {
-  @supports (gap:clamp(0.625rem ,-0.9199034393rem + 1.8082528661vw ,1.25rem)) {
-    .start-form {
-      gap: clamp(.625rem ,-.9199034393rem + 1.8082528661vw ,1.25rem)
-    }
-  }
-  @supports not (gap:clamp(0.625rem ,-0.9199034393rem + 1.8082528661vw ,1.25rem)) {
-    .start-form {
-      gap: calc(.625rem + .625 * (100vw - 85.43625rem)/ 34.56375)
-    }
-  }
-}
-@media (max-width:85.43625em) {
-  .start-form {
-    gap: .625rem
-  }
-}
-@media (min-width:43.81125em) {
-  .start-form {
-    grid-template-columns: repeat(3,1fr)
-  }
-}
-.start-form__item {
-  position: relative
-}
-.start-form__item .form__error {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  font-size: .875rem;
-  color: red
 }
 .item-art__image img {
   aspect-ratio: 396/224

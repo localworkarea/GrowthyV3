@@ -9,6 +9,12 @@
 			<main class="page">
 				<section class="hero">
 					<div class="hero__container">
+						<img class="hero__bg ibg ibg--contain"
+		 							src="@img/elements/el-hero-op.png"
+     							srcset="img/elements/el-hero-op-mob.png 481w,
+     							        img/elements/el-hero-op.png"
+									width="944" height="899"
+     							alt="Image">
 						<div class="hero__logo logo-hero">
 							<img class="logo-hero__ic logo-01" src="@img/icons/logo-omg.svg" width="168" height="93" alt="лого OMG agency">
 							<span></span>
@@ -1361,6 +1367,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+		@@include('html/_popup-form.htm',{})
 		@@include('html/_popup-msg.htm',{})
 		@@include('html/_js.htm',{})
 	</body>

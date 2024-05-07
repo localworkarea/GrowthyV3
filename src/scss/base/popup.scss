@@ -14,17 +14,6 @@ body::after {
 .popup-show body::after {
 	opacity: 1;
 }
-.popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
-}
 .popup_show {
 	z-index: 150;
 	visibility: visible;
@@ -33,45 +22,59 @@ body::after {
 }
 .popup_show .popup__content {
 	visibility: visible;
-	transform: scale(1);
-}
-.popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	position: relative;
-	padding-top: toRem(50);
-	@include adaptiveValue("padding-bottom", 50, 20,0,1920,768.98);
-	@include adaptiveValue("padding-left", 95, 20,0,1920,768.98);
-	@include adaptiveValue("padding-right", 95, 20,0,1920,768.98);
-	width: 100%;
-	max-width: toRem(800);
-	border-radius: toRem(20);
-	.popup-thk & {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		min-height: toRem(560);
-	}
-	.lock & {
-		visibility: visible;
-	}
+	opacity: 1;
+	transform: translateY(0%);
+	pointer-events: all;
 }
 
 .popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: toRem(30) toRem(20);
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+	// .popup__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .popup__content
+	&__content {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(10%);
+		transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+		background-color: #eee;
+		position: relative;
+		padding-top: toRem(50);
+		@include adaptiveValue("padding-bottom", 50, 20,0,1920,768.98);
+		@include adaptiveValue("padding-left", 95, 20,0,1920,768.98);
+		@include adaptiveValue("padding-right", 95, 20,0,1920,768.98);
+		width: 100%;
+		max-width: toRem(800);
+		border-radius: toRem(20);
+			// .popup-thk & {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	align-items: center;
+			// 	justify-content: center;
+			// 	min-height: toRem(560);
+			// }
+			.lock & {
+				visibility: visible;
+			}
+	}
 	// .popup__close
 	&__close {
 		position: absolute;
@@ -85,12 +88,6 @@ body::after {
 		}
 		outline: none;
 	}
-}
-
-.popup {
-	// .popup__close
-	&__close {
-	}
 	// .popup__title
 	&__title {
 		@include adaptiveValue("margin-bottom", 23, 30,0,1280,480);
@@ -98,28 +95,18 @@ body::after {
 		font-weight: 700;
 		@include adaptiveValue("font-size", 36, 30,0,1280,480);
 	}
-	// .popup__form
-	&__form {
-		display: grid;
-		gap: toRem(10);
-	}
-	// .popup__item
-	&__item {
-		position: relative;
-	}
-	// .popup__input
-	&__input {
-	}
-	// .popup__items
-	&__items {
-		display: grid;
-		gap: toRem(10);
-		@media (min-width:$mobileSmall){
-			 grid-template-columns: repeat(2, 1fr); 
-		}
-	}
-	// .popup__button
-	&__button {
-	}
+}
 
+
+.popup-msg {
+	// .popup-msg__body
+	&__body {
+		padding: toRem(50) 0;
+	}
+	// .popup-msg__txt
+	&__txt {
+		text-align: center;
+		color: #fff;
+		@include adaptiveValue("font-size", 40, 28,0,1920,480.98);
+	}
 }
