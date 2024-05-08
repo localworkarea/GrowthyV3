@@ -5,8 +5,367 @@
 	})
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header.htm',{
+				"class":"border-b",
+				"target":"",
+				"google":"",
+				"seo":"",
+				"development":"",
+				"cases":"",
+				"blog":"",
+				"about":"_active"
+			})
 			<main class="page">
+				<nav class="breadcrumb">
+					<div class="breadcrumb__wrapper">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<span itemprop="name">Всі послуги</span>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="page-one">
+					<div class="page-one__container">
+						<h1 class="title-main">Всі послуги</h1>
+						<div data-spollers="480.98,max" class="services__list">
+							<details data-open  class="services__item">
+								<summary class="services__summary">
+									<span>
+										Таргетована реклама
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">Таргетована реклама</a>
+										</li>
+										<li>
+											<a href="#">Таргетована реклама в FaceBook</a>
+										</li>
+										<li>
+											<a href="#">Таргетована реклама в Instagram</a>
+										</li>
+										<li>
+											<a href="#">Таргетована реклама в LinkedIn</a>
+										</li>
+										<li>
+											<a href="#">Таргетована реклама в TikTok</a>
+										</li>
+										<li>
+											<a href="#">Налаштування pixel Facebook</a>
+										</li>
+										<li>
+											<a href="#">Налаштування Бізнес менеджера Facebook</a>
+										</li>
+										<li>
+											<a href="#">Аудит рекламного кабінета Facebook</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										Google реклама
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">Контекстна реклама в пошуку Google</a>
+										</li>
+										<li>
+											<a href="#">Реклама на сайтах</a>
+										</li>
+										<li>
+											<a href="#">Google Shopping </a>
+										</li>
+										<li>
+											<a href="#">Реклама в App</a>
+										</li>
+										<li>
+											<a href="#">Реклама в YouTube</a>
+										</li>
+										<li>
+											<a href="#">Реклама на Google Maps</a>
+										</li>
+										<li>
+											<a href="#">Аудит рекламного кабінета Google Ads</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										SEO просування
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">SEO просування сайта</a>
+										</li>
+										<li>
+											<a href="#">Просування точки Google Maps</a>
+										</li>
+										<li>
+											<a href="#">Підбір семантичного ядра</a>
+										</li>
+										<li>
+											<a href="#">Контент-маркетинг</a>
+										</li>
+										<li>
+											<a href="#">Внутрішня оптимізація сайта</a>
+										</li>
+										<li>
+											<a href="#">Закупка посилань на сайт </a>
+										</li>
+										<li>
+											<a href="#">SEO - аудит</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										Розробка сайтів
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">
+												Розробка сайтів
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Розробка дизайну сайта
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Верстка сайта
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Підключення та розробка адмін панелі
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Налаштування аналітики Google Analytics
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Створення дашбордів в LookerStudio
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												UX UI аудит сайта
+											</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										SMM просування
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">
+												Розробка смм стратегії
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Аудит та аналіз соцмереж
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Розробка контент-плану
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ведення Instagram
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ведення Facebook
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ведення TikTok
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ведення Linkedin
+											</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										Просування застосунків
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">
+												ASO для застосунка
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Apple Serch Ads
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Просування застосунків (android/ios) Google Ads
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Таргетована реклама для застосунків в соцмережах
+											</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="services__item">
+								<summary class="services__summary">
+									<span>
+										Growth Marketing
+									</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.55671e-07C6.72 1.0176e-06 -1.01695e-06 6.735 -6.55671e-07 15L0.00576337 15.4196C0.228243 23.5059 6.86034 30 15 30C23.265 30 30 23.28 30 15C30 6.735 23.265 2.94397e-07 15 6.55671e-07ZM21 17.9704C20.55 18.4054 19.845 18.4054 19.41 17.9554L15 13.5304L10.59 17.9554C10.155 18.4054 9.43496 18.4054 8.99996 17.9704C8.54996 17.5204 8.54996 16.8154 8.99996 16.3804L14.205 11.1454C14.415 10.9354 14.7 10.8154 15 10.8154C15.3 10.8154 15.585 10.9354 15.795 11.1454L21 16.3804C21.225 16.5904 21.33 16.8754 21.33 17.1604C21.33 17.4604 21.225 17.7454 21 17.9704Z" fill="#FFA132"/>
+									</svg>
+								</summary>
+								<div class="services__body">
+									<ul>
+										<li>
+											<a href="#">
+												Пошук маркетингової зв'язки
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ресьорч вашої ніші
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Розробка маркетинг стратегії
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Розробка digital стратегії
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Бренд стратегія
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Перформенс маркетинг
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Інструменти
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Розробка креативів для реклами
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Відеореклама
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Медійна реклама
+											</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+						</div>
+					</div>
+				</section>
+
+				<section class="form-start form-footer bg-blue">
+					<div class="form-start__container">
+						<div class="form-start__wrapper">
+							<h2>Почати роботу з нами</h2>
+							<div class="form-start__body">
+								<p class="form-start__txt-a">Індивідуальний прорахунок вартості</p>
+								<p class="form-start__txt">Ми розрахуємо вартість проєкту безкоштовно, лише заповніть цю коротку форму</p>
+							</div>
+						</div>
+						<form data-dev data-popup-message="#popup-msg" class="start-form" action="" method="POST">
+							<div class="start-form__item">
+								<input type="text" name="name" data-error="Обов'язкове поле" placeholder="Введіть ваше ім’я " class="start-form__input input" data-required>
+							</div>
+							<div class="start-form__item">
+								<input type="tel" name="tel" data-error="Обов'язкове поле" placeholder="+38 (0__) ___-__-__" class="start-form__input input" data-required>
+							</div>
+							<button type="submit" class="start-form__btn btn btn--02">
+								<span>Відправити</span>
+							</button>
+						</form>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

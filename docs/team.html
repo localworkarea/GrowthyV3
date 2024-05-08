@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240507135745">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240508175105">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="100" class="header">
+		<header data-scroll="100" class="header border-b">
 			<div class="header__wrapper">
 				<a href="index.html" class="header__logo" aria-label="посилання на головну сторінку">
 					<img src="img/icons/logo-growthy-black.svg" width="260" height="40" alt="лого GROWTHY growth digital marketing">
@@ -22,14 +22,14 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="target.html" class="menu__link _active" aria-label="посилання на сторінку"><span>Таргетована реклама</span></a></li>
-							<li class="menu__item"><a href="google.html" class="menu__link" aria-label="посилання на сторінку"><span>Google реклама</span></a></li>
-							<li class="menu__item"><a href="seo.html" class="menu__link" aria-label="посилання на сторінку"><span>SEO просування</span></a></li>
-							<li class="menu__item"><a href="development.html" class="menu__link" aria-label="посилання на сторінку"><span>Розробка сайтів</span></a></li>
-							<li class="menu__item"><a href="cases.html" class="menu__link" aria-label="посилання на сторінку"><span>Кейси</span></a></li>
-							<li class="menu__item"><a href="blog.html" class="menu__link" aria-label="посилання на сторінку"><span>Блог</span></a></li>
+							<li class="menu__item"><a href="target.html" class="menu__link " aria-label="посилання на сторінку"><span>Таргетована реклама</span></a></li>
+							<li class="menu__item"><a href="google.html" class="menu__link " aria-label="посилання на сторінку"><span>Google реклама</span></a></li>
+							<li class="menu__item"><a href="seo.html" class="menu__link " aria-label="посилання на сторінку"><span>SEO просування</span></a></li>
+							<li class="menu__item"><a href="development.html" class="menu__link " aria-label="посилання на сторінку"><span>Розробка сайтів</span></a></li>
+							<li class="menu__item"><a href="cases.html" class="menu__link " aria-label="посилання на сторінку"><span>Кейси</span></a></li>
+							<li class="menu__item"><a href="blog.html" class="menu__link " aria-label="посилання на сторінку"><span>Блог</span></a></li>
 							<li class="menu__item has-sub-menu">
-								<a href="#" class="menu__link link-sub-menu" aria-label="посилання на сторінку"><span>Про нас</span></a>
+								<a href="#" class="menu__link link-sub-menu _active" aria-label="посилання на сторінку"><span>Про нас</span></a>
 								<div class="sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item"><a href="contacts.html" class="sub-menu__link" aria-label="посилання на сторінку"><span>Контакти</span></a></li>
@@ -62,6 +62,174 @@
 			</div>
 		</header>
 		<main class="page">
+			<nav class="breadcrumb">
+				<div class="breadcrumb__wrapper">
+					<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb__list">
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name">Головна</span>
+							</a>
+							<meta itemprop="position" content="1" />
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+							<span itemprop="name">Команда</span>
+							<meta itemprop="position" content="2" />
+						</li>
+					</ol>
+				</div>
+			</nav>
+			<section class="page-one bg-gray">
+				<div class="page-one__container">
+					<h1 class="title-main">Наша команда</h1>
+					<p class="team-hero__txt">
+						Growthy - це команда, що допомагає брендам і компаніям рости, використовуючи нові стратегії
+					</p>
+					<ul class="team-hero__list">
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team(1).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(1).webp" srcset="img/team/team(1)-mob.webp 481w,
+     							        img/team/team(1).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Іван Сальницький
+								</p>
+								<p class="team-hero__pos">
+									CEO
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (2).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(2).webp" srcset="img/team/team(2)-mob.webp 481w,
+     							        img/team/team(2).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Анна Озарчук
+								</p>
+								<p class="team-hero__pos">
+									ACCOUNT MANAGER
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (3).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(3).webp" srcset="img/team/team(3)-mob.webp 481w,
+     							        img/team/team(3).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Катя Савчук
+								</p>
+								<p class="team-hero__pos">
+									HEAD OF DESIGN
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (4).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(4).webp" srcset="img/team/team(4)-mob.webp 481w,
+     							        img/team/team(4).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Діма Копилов
+								</p>
+								<p class="team-hero__pos">
+									CREATIVE STRATEGIST
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (5).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(5).webp" srcset="img/team/team(5)-mob.webp 481w,
+													img/team/team(5).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Влад Бондаренко
+								</p>
+								<p class="team-hero__pos">
+									WEB DEVELOPER
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (6).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(6).webp" srcset="img/team/team(6)-mob.webp 481w,
+     							        img/team/team(6).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Максим Ткаченко
+								</p>
+								<p class="team-hero__pos">
+									PPC SPECIALIST
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (7).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(7).webp" srcset="img/team/team(7)-mob.webp 481w,
+     							        img/team/team(7).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Софія Корнєєва
+								</p>
+								<p class="team-hero__pos">
+									SMM MANAGER
+								</p>
+							</div>
+						</li>
+						<li class="team-hero__item">
+							<div class="team-hero__image">
+								<!-- <img class="ibg" src="img/team/team (8).webp" width="292" height="292" alt="Image"> -->
+								<img class="ibg" src="img/team/team(8).webp" srcset="img/team/team(8)-mob.webp 481w,
+     							        img/team/team(8).webp" width="292" height="292" alt="Image">
+							</div>
+							<div class="team-hero__body">
+								<p class="team-hero__name">
+									Віталій Волошин
+								</p>
+								<p class="team-hero__pos">
+									WEB DEVELOPER
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="form-start form-footer bg-blue">
+				<div class="form-start__container">
+					<div class="form-start__wrapper">
+						<h2>Почати роботу з нами</h2>
+						<div class="form-start__body">
+							<p class="form-start__txt-a">Індивідуальний прорахунок вартості</p>
+							<p class="form-start__txt">Ми розрахуємо вартість проєкту безкоштовно, лише заповніть цю коротку форму</p>
+						</div>
+					</div>
+					<form data-dev data-popup-message="#popup-msg" class="start-form" action="" method="POST">
+						<div class="start-form__item">
+							<input type="text" name="name" data-error="Обов'язкове поле" placeholder="Введіть ваше ім’я " class="start-form__input input" data-required>
+						</div>
+						<div class="start-form__item">
+							<input type="tel" name="tel" data-error="Обов'язкове поле" placeholder="+38 (0__) ___-__-__" class="start-form__input input" data-required>
+						</div>
+						<button type="submit" class="start-form__btn btn btn--02">
+							<span>Відправити</span>
+						</button>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__wrapper">
@@ -147,8 +315,8 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <script src="files/inputmask.min.js?_v=20240507135745"></script> -->
-	<script src="js/app.min.js?_v=20240507135745"></script>
+	<!-- <script src="files/inputmask.min.js?_v=20240508175105"></script> -->
+	<script src="js/app.min.js?_v=20240508175105"></script>
 </body>
 
 </html>

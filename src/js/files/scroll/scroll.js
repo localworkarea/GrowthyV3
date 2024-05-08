@@ -123,48 +123,51 @@ export function headerScroll() {
 export function digitsCounter() {
 	// Функція ініціалізації
 	function digitsCountersInit(digitsCountersItems) {
-		let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
-		if (digitsCounters.length) {
-			digitsCounters.forEach(digitsCounter => {
-				// Обнулення
-				if (digitsCounter.hasAttribute('data-go')) return;
-				digitsCounter.setAttribute('data-go', '');
-				digitsCounter.dataset.digitsCounter = digitsCounter.innerHTML;
-				digitsCounter.innerHTML = `0`;
-				// Анімація
-				digitsCountersAnimate(digitsCounter);
-			});
-		}
+			let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
+			if (digitsCounters.length) {
+					digitsCounters.forEach(digitsCounter => {
+							// Обнулення
+							digitsCounter.dataset.digitsCounter = digitsCounter.dataset.initialValue;
+							digitsCounter.innerHTML = `0`;
+							// Анімація
+							digitsCountersAnimate(digitsCounter);
+					});
+			}
 	}
 	// Функція анімації
 	function digitsCountersAnimate(digitsCounter) {
-		let startTimestamp = null;
-		const duration = parseFloat(digitsCounter.dataset.digitsCounterSpeed) ? parseFloat(digitsCounter.dataset.digitsCounterSpeed) : 1000;
-		const startValue = parseFloat(digitsCounter.dataset.digitsCounter);
-		const format = digitsCounter.dataset.digitsCounterFormat ? digitsCounter.dataset.digitsCounterFormat : ' ';
-		const startPosition = 0;
-		const step = (timestamp) => {
-			if (!startTimestamp) startTimestamp = timestamp;
-			const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-			const value = Math.floor(progress * (startPosition + startValue));
-			digitsCounter.innerHTML = typeof digitsCounter.dataset.digitsCounterFormat !== 'undefined' ? getDigFormat(value, format) : value;
-			if (progress < 1) {
-				window.requestAnimationFrame(step);
-			} else {
-				digitsCounter.removeAttribute('data-go');
-			}
-		};
-		window.requestAnimationFrame(step);
+			let startTimestamp = null;
+			const duration = parseFloat(digitsCounter.dataset.digitsCounterSpeed) ? parseFloat(digitsCounter.dataset.digitsCounterSpeed) : 1000;
+			const startValue = parseFloat(digitsCounter.dataset.digitsCounter);
+			const format = digitsCounter.dataset.digitsCounterFormat ? digitsCounter.dataset.digitsCounterFormat : ' ';
+			const startPosition = 0;
+			const step = (timestamp) => {
+					if (!startTimestamp) startTimestamp = timestamp;
+					const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+					const value = Math.floor(progress * (startPosition + startValue));
+					digitsCounter.innerHTML = typeof digitsCounter.dataset.digitsCounterFormat !== 'undefined' ? getDigFormatA(value, format) : value;
+					if (progress < 1) {
+							window.requestAnimationFrame(step);
+					}
+			};
+			window.requestAnimationFrame(step);
 	}
 	function digitsCounterAction(e) {
-		const entry = e.detail.entry;
-		const targetElement = entry.target;
-		if (targetElement.querySelectorAll("[data-digits-counter]").length) {
-			digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
-		}
+			const entry = e.detail.entry;
+			const targetElement = entry.target;
+			if (targetElement.querySelectorAll("[data-digits-counter]").length) {
+					digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
+			}
 	}
 
 	document.addEventListener("watcherCallback", digitsCounterAction);
+}
+
+// Используйте эту функцию для форматирования числа с разделителями
+function getDigFormatA(num, format) {
+	const parts = num.toString().split(".");
+	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, format);
+	return parts.join(".");
 }
 // При підключенні модуля обробник події запуститься автоматично
 setTimeout(() => {

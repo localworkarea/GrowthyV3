@@ -15,6 +15,21 @@
       min-height: toRem(64) !important;
     }
   }
+  &.border-b {
+    @media (min-width:$mobileSmall){
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        bottom: 0;
+        width: calc(100% - toRem(40));
+        max-width: toRem(1800);
+        height: toRem(1);
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
   // .header__wrapper
   &__wrapper {
     @extend %wrapper;

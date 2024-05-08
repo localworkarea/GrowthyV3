@@ -444,9 +444,6 @@
             if (window.FLS) console.log(message);
         }), 0);
     }
-    function getDigFormat(item, sepp = " ") {
-        return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
-    }
     function uniqArray(array) {
         return array.filter((function(item, index, self) {
             return self.indexOf(item) === index;
@@ -1092,9 +1089,7 @@
         function digitsCountersInit(digitsCountersItems) {
             let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
             if (digitsCounters.length) digitsCounters.forEach((digitsCounter => {
-                if (digitsCounter.hasAttribute("data-go")) return;
-                digitsCounter.setAttribute("data-go", "");
-                digitsCounter.dataset.digitsCounter = digitsCounter.innerHTML;
+                digitsCounter.dataset.digitsCounter = digitsCounter.dataset.initialValue;
                 digitsCounter.innerHTML = `0`;
                 digitsCountersAnimate(digitsCounter);
             }));
@@ -1109,8 +1104,8 @@
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                 const value = Math.floor(progress * (startPosition + startValue));
-                digitsCounter.innerHTML = typeof digitsCounter.dataset.digitsCounterFormat !== "undefined" ? getDigFormat(value, format) : value;
-                if (progress < 1) window.requestAnimationFrame(step); else digitsCounter.removeAttribute("data-go");
+                digitsCounter.innerHTML = typeof digitsCounter.dataset.digitsCounterFormat !== "undefined" ? getDigFormatA(value, format) : value;
+                if (progress < 1) window.requestAnimationFrame(step);
             };
             window.requestAnimationFrame(step);
         }
@@ -1120,6 +1115,11 @@
             if (targetElement.querySelectorAll("[data-digits-counter]").length) digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
         }
         document.addEventListener("watcherCallback", digitsCounterAction);
+    }
+    function getDigFormatA(num, format) {
+        const parts = num.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, format);
+        return parts.join(".");
     }
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -2849,7 +2849,13 @@ PERFORMANCE OF THIS SOFTWARE.
                 gallery,
                 galleryClass: lightgallery_es5(gallery, {
                     licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
-                    speed: 500
+                    speed: 500,
+                    download: true,
+                    mobileSettings: {
+                        controls: true,
+                        showCloseIcon: true,
+                        download: true
+                    }
                 })
             });
         }));

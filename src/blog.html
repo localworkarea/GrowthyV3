@@ -5,8 +5,235 @@
 	})
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header.htm',{
+				"class":"border-b",
+				"target":"",
+				"google":"",
+				"seo":"",
+				"development":"",
+				"cases":"",
+				"blog":"_active",
+				"about":""
+			})
 			<main class="page">
+				<nav class="breadcrumb">
+					<div class="breadcrumb__wrapper">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<span itemprop="name">Блог</span>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="page-one bg-gray">
+					<div class="page-one__container">
+						<h1 class="title-main">Статті</h1>
+						<ul class="hero-art__list">
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-01.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Покажемо, як розробити SMM-стратегію та заощадити час, гроші та нерви
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-02.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Заробляй на TikTok
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-03.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Інфлюенсери? Хто вони...
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-01.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Покажемо, як розробити SMM-стратегію та заощадити час, гроші та нерви
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-02.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Заробляй на TikTok
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="hero-art__item">
+								<a href="#" class="hero-art__article item-art" aria-label="посилання на статтю">
+									<div class="item-art__image">
+										<img class="ibg" src="@img/articles/article-03.jpg" width="396" height="224" alt="опис іллюстрації">
+									</div>
+									<div class="item-art__body">
+										<p class="item-art__title">
+											Інфлюенсери? Хто вони...
+										</p>
+										<div class="item-art__footer">
+											<div class="item-art__wrap">
+												<p class="item-art__time">
+													<time datetime="2023-04-15">26 січня 2023</time>
+												</p>
+												<p class="item-art__read">
+													<span>13</span> хвилин читання
+												</p>
+											</div>
+											<p class="item-art__view">354</p>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="pagination">
+							<button disabled class="pagination__button">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 20C0 8.96 8.98 0 20 0L20.5595 0.00770187C31.3412 0.304302 40 9.1471 40 20C40 31.02 31.04 40 20 40C8.98 40 0 31.02 0 20ZM23.96 28.0001C24.54 27.4001 24.54 26.4601 23.94 25.8801L18.04 20.0001L23.94 14.1201C24.54 13.5401 24.54 12.5801 23.96 12.0001C23.36 11.4001 22.42 11.4001 21.84 12.0001L14.86 18.9401C14.58 19.2201 14.42 19.6001 14.42 20.0001C14.42 20.4001 14.58 20.7801 14.86 21.0601L21.84 28.0001C22.12 28.3001 22.5 28.4401 22.88 28.4401C23.28 28.4401 23.66 28.3001 23.96 28.0001Z" fill="black"/>
+								</svg>
+							</button>
+							<ul class="pagination__items">
+								<li class="pagination__item">
+									<a href="#" class="pagination__link active" aria-label="посилання на сторінку">1</a>
+								</li>
+								<li class="pagination__item">
+									<a href="#" class="pagination__link" aria-label="посилання на сторінку">2</a>
+								</li>
+								<li class="pagination__item">
+									<a href="#" class="pagination__link" aria-label="посилання на сторінку">3</a>
+								</li>
+								<li class="pagination__item">
+									<a href="#" class="pagination__link" aria-label="посилання на сторінку">4</a>
+								</li>
+								<li class="pagination__item">
+									<a href="#" class="pagination__link" aria-label="посилання на сторінку">5</a>
+								</li>
+								<li class="pagination__item">
+									<span class="pagination__blank">...</span>
+								</li>
+								<li class="pagination__item">
+									<a href="#" class="pagination__link" aria-label="посилання на сторінку">10</a>
+								</li>
+							</ul>
+							<button class="pagination__button">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.04 31.02 40 20 40L19.4405 39.9923C8.65884 39.6957 0 30.8529 0 20C0 8.98 8.96 0 20 0C31.02 0 40 8.98 40 20ZM16.04 11.9999C15.46 12.5999 15.46 13.5399 16.06 14.1199L21.96 19.9999L16.06 25.8799C15.46 26.4599 15.46 27.4199 16.04 27.9999C16.64 28.5999 17.58 28.5999 18.16 27.9999L25.14 21.0599C25.42 20.7799 25.58 20.3999 25.58 19.9999C25.58 19.5999 25.42 19.2199 25.14 18.9399L18.16 11.9999C17.88 11.6999 17.5 11.5599 17.12 11.5599C16.72 11.5599 16.34 11.6999 16.04 11.9999Z" fill="black"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="form-start form-footer bg-blue">
+					<div class="form-start__container">
+						<div class="form-start__wrapper">
+							<h2>Почати роботу з нами</h2>
+							<div class="form-start__body">
+								<p class="form-start__txt-a">Індивідуальний прорахунок вартості</p>
+								<p class="form-start__txt">Ми розрахуємо вартість проєкту безкоштовно, лише заповніть цю коротку форму</p>
+							</div>
+						</div>
+						<form data-dev data-popup-message="#popup-msg" class="start-form" action="" method="POST">
+							<div class="start-form__item">
+								<input type="text" name="name" data-error="Обов'язкове поле" placeholder="Введіть ваше ім’я " class="start-form__input input" data-required>
+							</div>
+							<div class="start-form__item">
+								<input type="tel" name="tel" data-error="Обов'язкове поле" placeholder="+38 (0__) ___-__-__" class="start-form__input input" data-required>
+							</div>
+							<button type="submit" class="start-form__btn btn btn--02">
+								<span>Відправити</span>
+							</button>
+						</form>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

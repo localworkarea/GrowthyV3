@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240507135745">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240508175105">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="100" class="header">
+		<header data-scroll="100" class="header border-b">
 			<div class="header__wrapper">
 				<a href="index.html" class="header__logo" aria-label="посилання на головну сторінку">
 					<img src="img/icons/logo-growthy-black.svg" width="260" height="40" alt="лого GROWTHY growth digital marketing">
@@ -22,14 +22,14 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="target.html" class="menu__link _active" aria-label="посилання на сторінку"><span>Таргетована реклама</span></a></li>
-							<li class="menu__item"><a href="google.html" class="menu__link" aria-label="посилання на сторінку"><span>Google реклама</span></a></li>
-							<li class="menu__item"><a href="seo.html" class="menu__link" aria-label="посилання на сторінку"><span>SEO просування</span></a></li>
-							<li class="menu__item"><a href="development.html" class="menu__link" aria-label="посилання на сторінку"><span>Розробка сайтів</span></a></li>
-							<li class="menu__item"><a href="cases.html" class="menu__link" aria-label="посилання на сторінку"><span>Кейси</span></a></li>
-							<li class="menu__item"><a href="blog.html" class="menu__link" aria-label="посилання на сторінку"><span>Блог</span></a></li>
+							<li class="menu__item"><a href="target.html" class="menu__link " aria-label="посилання на сторінку"><span>Таргетована реклама</span></a></li>
+							<li class="menu__item"><a href="google.html" class="menu__link " aria-label="посилання на сторінку"><span>Google реклама</span></a></li>
+							<li class="menu__item"><a href="seo.html" class="menu__link " aria-label="посилання на сторінку"><span>SEO просування</span></a></li>
+							<li class="menu__item"><a href="development.html" class="menu__link " aria-label="посилання на сторінку"><span>Розробка сайтів</span></a></li>
+							<li class="menu__item"><a href="cases.html" class="menu__link " aria-label="посилання на сторінку"><span>Кейси</span></a></li>
+							<li class="menu__item"><a href="blog.html" class="menu__link " aria-label="посилання на сторінку"><span>Блог</span></a></li>
 							<li class="menu__item has-sub-menu">
-								<a href="#" class="menu__link link-sub-menu" aria-label="посилання на сторінку"><span>Про нас</span></a>
+								<a href="#" class="menu__link link-sub-menu _active" aria-label="посилання на сторінку"><span>Про нас</span></a>
 								<div class="sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item"><a href="contacts.html" class="sub-menu__link" aria-label="посилання на сторінку"><span>Контакти</span></a></li>
@@ -62,6 +62,101 @@
 			</div>
 		</header>
 		<main class="page">
+			<nav class="breadcrumb">
+				<div class="breadcrumb__wrapper">
+					<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb__list">
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name">Головна</span>
+							</a>
+							<meta itemprop="position" content="1" />
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+							<span itemprop="name">Контакти</span>
+							<meta itemprop="position" content="2" />
+						</li>
+					</ol>
+				</div>
+			</nav>
+			<section class="page-one">
+				<div class="page-one__container">
+					<h1 class="title-main">Контакти</h1>
+				</div>
+				<div class="contacts__wrapper">
+					<img class="contacts__bg ibg" src="img/contacts/hero.webp" alt="бекграунд">
+					<div class="contacts__container">
+						<ul class="contacts__items">
+							<li class="contacts__item item-contcs">
+								<a href="tel:+380660725474" class="item-contcs__button txt-three" aria-label="кнопка виклику по телефону">
+									<img src="img/icons/tel.svg" class="item-contcs__ic" alt="іконка телефону">
+									<span class="item-contcs__txt">
+										+38 (066) 072 54 74
+									</span>
+								</a>
+							</li>
+							<a href="https://maps.app.goo.gl/wmf3c3pePpdX1RTU7" target="_blank" class="item-contcs__button txt-three" aria-label="посилання на гугл мапу">
+								<img src="img/icons/location.svg" class="item-contcs__ic" alt="іконка локації">
+								<span class="item-contcs__txt">
+									Київ, Воздвиженьска, 41
+								</span>
+							</a>
+							</li>
+							<a href="mailto:office@ghack.agency" class="item-contcs__button txt-three" aria-label="кнопка відкриття поштового сервісу">
+								<img src="img/icons/mail.svg" class="item-contcs__ic" alt="іконка e-mail">
+								<span class="item-contcs__txt">
+									office@ghack.agency
+								</span>
+							</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contacts__container">
+					<div data-gallery class="contacts__gallery gallery">
+						<a href="img/contacts/gallery/01.webp" class="gallery__image">
+							<img alt="Офіс 1" src="img/contacts/gallery/01-thumb.webp" class="gallery__preview ibg">
+						</a>
+						<a href="img/contacts/gallery/02.webp" class="gallery__image">
+							<img alt="Офіс 2" src="img/contacts/gallery/02-thumb.webp" class="gallery__preview ibg">
+						</a>
+						<a href="img/contacts/gallery/03.webp" class="gallery__image">
+							<img alt="Офіс 3" src="img/contacts/gallery/03-thumb.webp" class="gallery__preview ibg">
+						</a>
+						<a href="img/contacts/gallery/04.webp" class="gallery__image">
+							<img alt="Офіс 4" src="img/contacts/gallery/04-thumb.webp" class="gallery__preview ibg">
+						</a>
+						<a href="img/contacts/gallery/05.webp" class="gallery__image">
+							<img alt="Офіс 5" src="img/contacts/gallery/05-thumb.webp" class="gallery__preview ibg">
+						</a>
+					</div>
+					<div class="contacts__map">
+						<iframe class="ibg" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5080.128547646455!2d30.5120345!3d50.4585278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4260448ad3%3A0xea908be3be632117!2z0JHQuNC30L3QtdGBLdGG0LXQvdGC0YAgIkFydGV2aWxsYSwgVm96ZHZ5emhlbnMna2EgU3QsIDQxLCBLeWl2LCAwNDA3MQ!5e0!3m2!1sen!2sua!4v1706008534485!5m2!1sen!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+
+			</section>
+			<section class="form-start form-footer bg-blue">
+				<div class="form-start__container">
+					<div class="form-start__wrapper">
+						<h2>Почати роботу з нами</h2>
+						<div class="form-start__body">
+							<p class="form-start__txt-a">Індивідуальний прорахунок вартості</p>
+							<p class="form-start__txt">Ми розрахуємо вартість проєкту безкоштовно, лише заповніть цю коротку форму</p>
+						</div>
+					</div>
+					<form data-dev data-popup-message="#popup-msg" class="start-form" action="" method="POST">
+						<div class="start-form__item">
+							<input type="text" name="name" data-error="Обов'язкове поле" placeholder="Введіть ваше ім’я " class="start-form__input input" data-required>
+						</div>
+						<div class="start-form__item">
+							<input type="tel" name="tel" data-error="Обов'язкове поле" placeholder="+38 (0__) ___-__-__" class="start-form__input input" data-required>
+						</div>
+						<button type="submit" class="start-form__btn btn btn--02">
+							<span>Відправити</span>
+						</button>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__wrapper">
@@ -147,8 +242,8 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <script src="files/inputmask.min.js?_v=20240507135745"></script> -->
-	<script src="js/app.min.js?_v=20240507135745"></script>
+	<!-- <script src="files/inputmask.min.js?_v=20240508175105"></script> -->
+	<script src="js/app.min.js?_v=20240508175105"></script>
 </body>
 
 </html>

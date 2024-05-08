@@ -5,8 +5,1144 @@
 	})
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			@@include('html/_header.htm',{
+				"class":"border-b",
+				"target":"",
+				"google":"_active",
+				"seo":"",
+				"development":"",
+				"cases":"",
+				"blog":"",
+				"about":""
+			})
 			<main class="page">
+				<nav class="breadcrumb">
+					<div class="breadcrumb__wrapper">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="https://example.com/books/sciencefiction" href="services.html">
+									<span itemprop="name">Всі послуги</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+								<span itemprop="name">Google реклама</span>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="head-serv google">
+					<div class="head-serv__wrapper">
+						<div class="head-serv__container">
+							<div class="head-serv__body">
+								<div class="head-serv__block">
+									<h1 class="title-head">
+										Ефективна контекстна реклама
+									</h1>
+									<p class="sub-title">
+										Вирішуємо маркетингові задачі клієнтів за допомогою digital-інструментів
+									</p>
+								</div>
+								<div class="head-serv__image">
+									<img class="ibg ibg--contain" src="@img/elements/el-05.png" width="200" height="200" alt="декор">
+								</div>
+							</div>
+							<ul data-watch data-watch-once class="head-serv__list">
+								<li class="head-serv__item">
+									<div class="head-serv__numb">
+										<span data-digits-counter data-initial-value="114" class="head-serv__counter">114</span>
+									</div>
+									<p class="head-serv__txt">активних<br>
+										проектів</p>
+								</li>
+								<li class="head-serv__item">
+									<div class="head-serv__numb">
+										<span data-digits-counter data-initial-value="260600" data-digits-counter-format="" class="head-serv__counter">260600</span>$
+									</div>
+									<p class="head-serv__txt">середньомісячний<br>
+										спенд</p>
+								</li>
+								<li class="head-serv__item">
+									<div class="head-serv__numb">
+										<span data-digits-counter data-initial-value="93" class="head-serv__counter">93</span>%
+									</div>
+									<p class="head-serv__txt">клієнтів продовжують<br>
+										з нами роботу</p>
+								</li>
+								<li class="head-serv__item">
+									<div class="head-serv__numb">
+										<span data-digits-counter data-initial-value="32" class="head-serv__counter">32</span>
+									</div>
+									<p class="head-serv__txt">фахівця<br>
+										в команді</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="txt-block">
+						<div class="txt-block__container">
+							<div class="txt-block__aside">
+								<h2>
+									Як здійснюється контекстна реклама?
+								</h2>
+							</div>
+							<div class="txt-block__body">
+								<p class="main-txt">
+									Контекстна реклама – це можливість розвинути будь-який бізнес
+								</p>
+								<p class="main-txt">
+									Наша команда забезпечить появу ваших рекламних оголошень на необхідних сторінках. Правильний підбір ключових слів, геотаргетинг та інші налаштування дозволять отримати позитивний CTR (показник ефективності) рекламної кампанії
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="projects bg-gray">
+					<div class="projects__container">
+						<h2 class="title-main">Наші проєкти</h2>
+						<ul class="projects__list">
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (1).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Детейлінг авто</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													1,054
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Автобізнес
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$102.4
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													15 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (2).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Онлайн-сервіс бронювань квитків</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													33,759
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Пасажирські перевезення
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$1.2
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													9 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (3).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Виробництво елітних цукерок</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													20,145
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Пасажирські перевезення
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$1.2
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													9 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="projects__btn">
+							<a href="cases.html" class="btn btn--04" aria-label="посилання на сторінку всіх проєктів">
+								<span>Всі проєкти</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="spoller bg-blue">
+					<div class="spoller__container">
+						<div class="spoller__aside">
+							<h2>
+								Складові таргетованої реклами
+							</h2>
+						</div>
+						<div class="spoller__body">
+							<p>Отримайте ще більше уваги до свого бренду, завдяки якісним налаштуванням таргетованої реклами</p>
+							<div data-spollers data-spollers-speed="300" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Визначення цільової аудиторії
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Перед запуском реклами, ми складаємо портрет вашого ідеального споживача. За демографічними критеріями, інтересами та іншими характеристиками, налаштовується рекламна кампанія, яка принесе хороший результат
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Визначення цільової аудиторії
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Перед запуском реклами, ми складаємо портрет вашого ідеального споживача. За демографічними критеріями, інтересами та іншими характеристиками, налаштовується рекламна кампанія, яка принесе хороший результат
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Визначення цільової аудиторії
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Перед запуском реклами, ми складаємо портрет вашого ідеального споживача. За демографічними критеріями, інтересами та іншими характеристиками, налаштовується рекламна кампанія, яка принесе хороший результат
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="services-tab bg-gray">
+					<div class="services-tab__container">
+						<h2 class="title-main">
+							Наші послуги
+						</h2>
+						<div data-tabs data-tabs-animate="400" class="services-tab__wrapper">
+							<div class="services-tab__btn-wr">
+								<nav data-tabs-titles class="services-tab__buttons">
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn _tab-active">Таргетована
+										реклама</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">Google реклама</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">SEO
+										просування</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">Розробка
+										сайтів</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">SMM
+										просування</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">Просування
+										застосунків</button>
+									<button type="button" aria-label="кнопка відкриття табу" class="services-tab__btn">Growth
+										Marketing</button>
+								</nav>
+							</div>
+							<div data-tabs-body class="services-tab__content">
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Таргетована реклама
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Таргетована реклама в Facebook
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Таргетована реклама в Instagram
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Таргетована реклама в LinkedIn
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Таргетована реклама в TikTok
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Налаштування pixel Facebook
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Налаштування Бізнес менеджера Facebook
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Аудит рекламного кабінета Facebook
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Контекстна реклама в пошуку Google
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Реклама на сайтах
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Google Shopping
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Реклама в App
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Реклама в YouTube
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Реклама на Google Maps
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Аудит рекламного кабінета Google Ads
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													SEO просування сайта
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Просування точки Google Maps
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Підбір семантичного ядра
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Контент-маркетинг
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Внутрішня оптимізація сайта
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Закупка посилань на сайт
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													SEO - аудит
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Розробка сайтів
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Розробка дизайну сайта
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Верстка сайта
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Підключення та розробка адмін панелі
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Налаштування аналітики Google Analytics
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Створення дашбордів в LookerStudio
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													UX UI аудит сайта
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Розробка смм стратегії
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Аудит та аналіз соцмереж
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Розробка контент-плану
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Ведення Instagram
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Ведення Facebook
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Ведення TikTok
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Ведення	Linkedin
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Apple Search Ads
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													ASO для застосунка
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Просування застосунків (Android/IOS) Google Adds
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Таргетована реклама для застосунків в соцмережах
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="services-tab__body">
+									<ul class="services-tab__list">
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Медійна реклама
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Відеореклама
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Інструменти
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Перформенс маркетинг
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Розробка digital стратегії
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+												Розробка креативів для реклами
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Беренд стратегія
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Розробка маркетинг стратегії
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Ресьорч вашої ніші
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+										<li class="services-tab__item">
+											<a href="#" class="services-tab__link" aria-label="посилання на сторінку послуги">
+												<span>
+													Пошук маркетингової зв'язки
+												</span>
+												<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="form-start bg-blue">
+					<div class="form-start__container">
+						<div class="form-start__wrapper">
+							<h2>Почати роботу з нами</h2>
+							<div class="form-start__body">
+								<p class="form-start__txt-a">Індивідуальний прорахунок вартості</p>
+								<p class="form-start__txt">Ми розрахуємо вартість проєкту безкоштовно, лише заповніть цю коротку форму</p>
+							</div>
+						</div>
+						<form data-dev data-popup-message="#popup-msg" class="start-form" action="" method="POST">
+							<div class="start-form__item">
+								<input type="text" name="name" data-error="Обов'язкове поле" placeholder="Введіть ваше ім’я " class="start-form__input input" data-required>
+							</div>
+							<div class="start-form__item">
+								<input type="tel" name="tel" data-error="Обов'язкове поле" placeholder="+38 (0__) ___-__-__" class="start-form__input input" data-required>
+							</div>
+							<button type="submit" class="start-form__btn btn btn--02">
+								<span>Відправити</span>
+							</button>
+						</form>
+					</div>
+				</section>
+				<section class="projects bg-gray">
+					<div class="projects__container">
+						<h2 class="title-main">Наші проєкти</h2>
+						<ul class="projects__list">
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (1).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Детейлінг авто</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													1,054
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Автобізнес
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$102.4
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													15 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (2).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Онлайн-сервіс бронювань квитків</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													33,759
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Пасажирські перевезення
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$1.2
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													9 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="projects__item">
+								<a href="#" class="projects__card card-pr" aria-label="посилання на сторінку проєкту">
+									<div class="card-pr__image">
+										<img class="ibg" src="@img/projects/project (3).jpg" width="396" height="300" alt="зображення на фото: ">
+									</div>
+									<div class="card-pr__body">
+										<div class="card-pr__title">
+											<span>Виробництво елітних цукерок</span>
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.28 23.265 30 15 30L14.5804 29.9942C6.49413 29.7718 0 23.1397 0 15C0 6.735 6.72 0 15 0C23.265 0 30 6.735 30 15ZM12.0296 9.00004C11.5946 9.45004 11.5946 10.155 12.0446 10.59L16.4696 15L12.0446 19.41C11.5946 19.845 11.5946 20.565 12.0296 21C12.4796 21.45 13.1846 21.45 13.6196 21L18.8546 15.795C19.0646 15.585 19.1846 15.3 19.1846 15C19.1846 14.7 19.0646 14.415 18.8546 14.205L13.6196 9.00004C13.4096 8.77504 13.1246 8.67004 12.8396 8.67004C12.5396 8.67004 12.2546 8.77504 12.0296 9.00004Z" fill="#FFA132"/>
+											</svg>
+										</div>
+										<div class="card-pr__list">
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Заявки:
+												</div>
+												<div class="card-pr__info">
+													20,145
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ніша:
+												</div>
+												<div class="card-pr__info">
+													Пасажирські перевезення
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Ціна заявки:
+												</div>
+												<div class="card-pr__info">
+													$1.2
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Гео:
+												</div>
+												<div class="card-pr__info">
+													Польща
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Період:
+												</div>
+												<div class="card-pr__info">
+													9 міс.
+												</div>
+											</div>
+											<div class="card-pr__item">
+												<div class="card-pr__tilte-name">
+													Послуга:
+												</div>
+												<div class="card-pr__info">
+													Таргетована
+													реклама
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="projects__btn">
+							<a href="cases.html" class="btn btn--04" aria-label="посилання на сторінку всіх проєктів">
+								<span>Всі проєкти</span>
+							</a>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
