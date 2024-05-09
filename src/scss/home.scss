@@ -597,7 +597,6 @@
       background-repeat: no-repeat;
       background-size: contain;
       pointer-events: none;
-  
     }
     &::before {
       @include adaptiveValue("top", -100, -50,0,1920,1366.98);

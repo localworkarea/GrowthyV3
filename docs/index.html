@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240509135108">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240509135859">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +64,18 @@
 		<main class="page">
 			<section class="hero">
 				<div class="hero__container">
-					<img class="hero__bg ibg ibg--contain" src="img/elements/el-hero-op.webp" srcset="img/elements/el-hero-op-mob.webp 481w,
-     							        img/elements/el-hero-op.webp" width="944" height="899" alt="Image">
+					<!-- <img class="hero__bg ibg ibg--contain"
+		 							src="img/elements/el-hero-op.webp"
+     							srcset="img/elements/el-hero-op-mob.webp 481w,
+     							        img/elements/el-hero-op.webp"
+									width="944" height="899"
+     							alt="Image"> -->
+
+					<picture>
+						<source srcset="img/elements/el-hero-op-mob.webp" media="(max-width: 30.061em)" width="515" height="515" type="image/webp">
+						<source srcset="img/elements/el-hero-op.webp" width="320" height="320" type="image/webp">
+						<img class="hero__bg ibg ibg--contain" src="img/elements/el-hero-op.webp" width="515" height="515" alt="decor">
+					</picture>
 					<div class="hero__logo logo-hero">
 						<img class="logo-hero__ic logo-01" src="img/icons/logo-omg.svg" width="168" height="93" alt="лого OMG agency">
 						<span></span>
@@ -1517,8 +1527,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="files/inputmask.min.js?_v=20240509135108"></script> -->
-	<script src="js/app.min.js?_v=20240509135108"></script>
+	<!-- <script src="files/inputmask.min.js?_v=20240509135859"></script> -->
+	<script src="js/app.min.js?_v=20240509135859"></script>
 </body>
 
 </html>
