@@ -93,6 +93,13 @@
   }
 }
 
+// %gridRep3-1fr {
+//   grid-template-columns: repeat(3,1fr);
+// }
+// %gridRep2-1fr {
+//   grid-template-columns: repeat(2,1fr);
+// }
+
 %btnCardsWrapper {
   .btn {
     @media (min-width:toEm(820.98)){
@@ -130,6 +137,17 @@
       }
     }
   }
+}
+
+%brRad20 {
+  border-radius: toRem(20);
+}
+
+%grid {
+  display: grid;
+}
+%gap20-10 {
+  @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
 }
 
 // === colors =====================
@@ -197,17 +215,17 @@
     }
   }
   &.btn--02 {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     background-color:$orange;
     font-size: toRem(18);
     min-height: toRem(70);
-    border-radius: toRem(20);
   }
   &.btn--03 {
     background-color:$black;
     font-size: toRem(16);
     color: #fff;
     border-radius: toRem(16);
-    // min-height: toRem(80);
     @include adaptiveValue("min-height", 80, 70,0,1920,1366.98);
     @media (any-hover: hover){
       &:hover{
@@ -219,7 +237,8 @@
     }
   }
   &.btn--04 {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
     border: toRem(2) solid #000;
     @include adaptiveValue("font-size", 22, 18,0,1920,1366.98);
     @include adaptiveValue("min-height", 90,70,0,1920,1366.98);
@@ -264,6 +283,11 @@
   @include adaptiveValue("font-size", 42, 30,3,1366.98,480.98);
 }
 
+
+%fs16-14-16 {
+  @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
+  @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
+}
 
 
 :is(.txt-block, .cards-block, .form-start, .spoller, .cards-grid) h2 {
@@ -341,7 +365,8 @@
   }
   // .txt-block__container
   &__container {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @media (min-width:toEm(650.98)){
       grid-template-columns: 1fr 56%;

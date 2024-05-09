@@ -1,22 +1,12 @@
 .hero {
   @include adaptiveValue("padding-top", 100, 60,2,1920,1366.98);
-  @include adaptiveValue("padding-top", 60, 30,3,1366.98,480.98);
+  @include adaptiveValue("padding-top", 60, 40,3,1366.98,480.98);
   @extend %pddBottom;
   overflow: hidden;
   // .hero__container
   &__container {
     position: relative;
     z-index: 2;
-    // background-repeat: no-repeat;
-    // background-position: top;
-    // @media (min-width:$mobileSmall){
-    //     background-image: url("../img/elements/el-hero-op.png");
-    //     background-size: 80%;
-    //   }
-    //   @media (max-width:$mobileSmall){
-    //     background-image: url("../img/elements/el-hero-op-mob.png");
-    //     background-size: 120%; 
-    //   }
   }
 	// .hero__bg
 	&__bg {
@@ -126,8 +116,10 @@
 .serv-hero {
   // .serv-hero__list
   &__list {
-    display: grid;
-    @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
+    @extend %grid;
+    // display: grid;
+    @extend %gap20-10;
+    // @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     @media (min-width:toEm(820.98)){
       grid-template-columns: repeat(4,1fr);
     }
@@ -148,11 +140,13 @@
   }
   // .serv-hero__link
   &__link {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
+    @extend %gap20-10;
+    // @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     border: toRem(2) solid transparent;
     background-color: #fff;
     @include adaptiveValue("padding", 30, 16,0,1920,1366.98);
-    @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     box-shadow: 0px 5px 30px 0px rgb(212, 229, 240);
     transition: border-color .3s ease;
     display: flex;
@@ -200,7 +194,8 @@
 
 
 .digits {
-  display: grid;
+  @extend %grid;
+  // display: grid;
   @include adaptiveValue("column-gap", 100, 40,2,1920,769);
   &:not(:last-child) {
     @include adaptiveValue("margin-bottom", 100, 60,0,1920,1366.98);
@@ -310,7 +305,8 @@
   }
   // .cards-block__container
   &__container {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @media (min-width:toEm(650.98)){
       grid-template-columns: 1fr 72%;
@@ -327,7 +323,8 @@
   }
   // .cards-block__cards
   &__cards {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     @include adaptiveValue("gap", 20,16,0,1920,1366.98);
     @media (min-width:toEm(820.98)){
       grid-template-columns: repeat(3,1fr);
@@ -339,7 +336,8 @@
   }
   // .cards-block__item
   &__item {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
  
     @include adaptiveValue("padding", 30, 18,0,1920,1366.98);
   }
@@ -351,8 +349,10 @@
   }
   // .cards-block__txt
   &__txt {
-    @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
-    @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
+    @extend %fs16-14-16;
+
+    // @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
+    // @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
   }
 }
 
@@ -430,7 +430,8 @@
   }
   // .card-pr__list
   &__list {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     grid-template-columns: repeat(2,1fr);
     @include adaptiveValue("gap", 20, 10,2,1920,1366.98);
     @include adaptiveValue("gap", 10, 20,3,1366.98,480.98);
@@ -441,8 +442,9 @@
   // .card-pr__tilte-name
   &__tilte-name {
     color: #BBBBBB;
-    @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
-    @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
+    @extend %fs16-14-16;
+    // @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
+    // @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
     margin-bottom: toRem(4);
   }
   // .card-pr__info
@@ -476,10 +478,11 @@
 	}
   // .services-tab__buttons
   &__buttons {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     display: flex;
     align-items: center;
     width: fit-content;
-    border-radius: toRem(20);
     background-color:$blue;
     padding: toRem(8);
   }
@@ -509,7 +512,8 @@
   }
   // .services-tab__list
   &__list {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     @include adaptiveValue("gap", 18, 10,0,1920,1366.98);
     @media (min-width:$mobile){
       grid-template-columns: repeat(4,1fr);
@@ -526,13 +530,14 @@
   }
   // .services-tab__link
   &__link {
+    @extend %brRad20;
+    // border-radius: toRem(20);
+    border: toRem(2) solid transparent;
     background-color: #fff;
-    border-radius: toRem(20);
     display: flex;
     height: 100%;
     @include adaptiveValue("padding", 30, 20,0,1920,1366.98);
     @include adaptiveValue("font-size", 30, 18,0,1920,1366.98);
-    border: toRem(2) solid transparent;
     transition: border-color .3s ease, box-shadow .3s ease;
     font-weight: 700;
     @media (any-hover: hover){
@@ -621,7 +626,8 @@
   }
   // .form-start__wrapper
   &__wrapper {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @include adaptiveValue("margin-bottom", 40, 30,0,1920,1366.98);
     @media (min-width:$mobile){
@@ -700,8 +706,9 @@
     display: flex;
     justify-content: space-between;
     align-items:flex-end;
-    @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
-    @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
+    @extend %fs16-14-16;
+    // @include adaptiveValue("font-size", 16, 14,2,1920,1366.98);
+    // @include adaptiveValue("font-size", 14, 16,3,1366.98,480.98);
   }
   // .item-art__wrap
   &__wrap {
@@ -834,7 +841,8 @@
   }
 	// .seo-block__item
 	&__item {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @media (min-width:toEm(700.98)){
       grid-template-columns: 1fr 56%;
@@ -908,8 +916,10 @@
   }
   // .team-hero__list
   &__list {
-    display: grid;
-    @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
+    @extend %grid;
+    // display: grid;
+    @extend %gap20-10;
+    // @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     @media (min-width:$mobile){
       grid-template-columns: repeat(4,1fr);
     }
@@ -922,9 +932,10 @@
   }
   // .team-hero__item
   &__item {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     display: flex;
     flex-direction: column;
-    border-radius: toRem(20);
     overflow: hidden;
     height: 100%;
   }
@@ -1107,8 +1118,9 @@
     .google &,
     .seo &,
     .development & {
+      @extend %grid;
+      // display: grid;
       position: relative;
-      display: grid;
       @include adaptiveValue("margin-bottom", 60, 20,0,1920,480.98);
       @media (min-width:toEm(600.98)){
         gap: toRem(40);
@@ -1121,11 +1133,12 @@
     .sub-seo &,
     .sub-development &,
     .sub-category & {
+      @extend %brRad20;
+      // border-radius: toRem(20);
       text-align: center;
       backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.2);
       border: toRem(2) solid #fff;
-      border-radius: toRem(20);
       @include adaptiveValue("padding", 40, 20,0,1920,1366.98);
       @include adaptiveValue("margin-bottom", 16, 6,0,1920,1366.98 );
       @media (max-width:$mobile) and (min-width:$mobileSmall) {
@@ -1170,7 +1183,8 @@
   }
   // .head-serv__list
   &__list {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     @include adaptiveValue("gap", 16, 6,0,1920,1366.98);
     @media (min-width:toEm(750.98)){
       grid-template-columns: repeat(4,1fr);
@@ -1201,11 +1215,12 @@
       color: #fff;
     }
 
+    @extend %brRad20;
+    // border-radius: toRem(20);
     padding-left: toRem(10);
     padding-right: toRem(10);
     @include adaptiveValue("padding-top", 40, 26,0,1920,1366.98);
     @include adaptiveValue("padding-bottom", 40, 26,0,1920,1366.98);
-    border-radius: toRem(20);
     border: toRem(2) solid;
     display: flex;
     flex-direction: column;
@@ -1275,7 +1290,8 @@
   }
   // .spoller__container
   &__container {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @media (min-width:toEm(750.98)){
       grid-template-columns: 1fr 64%;
@@ -1305,9 +1321,10 @@
   }
   // .spollers__title
   &__title {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     outline: none;
     cursor: pointer;
-    border-radius: toRem(20);
     font-weight: 700;
     @include adaptiveValue("font-size", 22, 16,0,1920,1366.98);
     display: flex;
@@ -1393,12 +1410,14 @@
   &__row,
   &__stages,
   &__result {
-    display: grid;
-    @include adaptiveValue("gap",16, 6,0,1920,1366.98 );
+    @extend %grid;
+    // display: grid;
+    @include adaptiveValue("gap", 16, 6,0,1920,1366.98);
   }
   // .steps__column
   &__column {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     @include adaptiveValue("gap",36, 18,0,1920,1366.98 );
     margin-inline: auto;
     @include adaptiveValue("max-width", 812, 570,0,1920,1366.98);
@@ -1433,7 +1452,8 @@
   }
   // .steps__head
   &__head {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
     min-height: toRem(66);
     color: #fff;
     padding: toRem(6) toRem(20);
@@ -1445,9 +1465,10 @@
   }
   // .steps__item
   &__item {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     @include adaptiveValue("padding", 26, 16,0,1920,1366.98);
     background-color: #fff;
-    border-radius: toRem(20);
     border: toRem(2) solid;
     ul li {
       padding-left: toRem(16);
@@ -1489,7 +1510,8 @@
   @extend %pddTopB;
   // .cards-grid__container
   &__container {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     gap: toRem(20);
     @media (min-width:toEm(750.98)){
       grid-template-columns: 1fr 64%;
@@ -1519,9 +1541,10 @@
   }
   // .cards-grid__list
   &__list {
+    @extend %grid;
+    // display: grid;
     position: relative;
     z-index: 2;
-    display: grid;
     @include adaptiveValue("gap",16, 6,0,1920,1366.98 );
     @media (min-width:$mobile){
       grid-template-columns: repeat(2,1fr);
@@ -1529,7 +1552,8 @@
   }
   // .cards-grid__item
   &__item {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
     border: toRem(2) solid $blue;
     @include adaptiveValue("padding",26, 16,0,1920,1366.98 );
     backdrop-filter: blur(30px);
@@ -1586,7 +1610,7 @@
     @include adaptiveValue("padding-bottom", 20, 10,0,1920,1024);
     border: toRem(2) solid transparent;
     border-radius: toRem(40);
-    @include adaptiveValue("font-size", 20, 14,2,1920,768);
+    @include adaptiveValue("font-size", 20, 14,2,1920,768.98);
     @include adaptiveValue("font-size", 14, 12,3,768.98,480);
     font-weight: 400;
     display: flex;
@@ -1718,7 +1742,8 @@
   }
   // .contacts__items
   &__items {
-    display: grid;
+    @extend %grid;
+    // display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include adaptiveValue("padding-top", 90, 50,0,1920,1440);
     @media (min-width:$tablet){
@@ -1803,7 +1828,8 @@
 
   
 .gallery {
-  display: grid;
+  @extend %grid;
+  // display: grid;
   @media (min-width:$mobile){
     gap: toRem(20); 
   }
@@ -1815,7 +1841,8 @@
   }
   // .gallery__image
   &__image {
-    border-radius: toRem(20);
+    @extend %brRad20;
+    // border-radius: toRem(20);
     overflow: hidden;
     @media (any-hover: hover){
       &:hover{
@@ -1884,9 +1911,12 @@
 .services {
   // .services__list
   &__list {
+    @extend %grid;
+    // display: grid;
+    @extend %gap20-10;
+    // @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     position: relative;
     z-index: 2;
-    display: grid;
     background-image:url('../img/elements/el-02-mob-b.png');
     background-repeat: no-repeat;
     background-size: 90%;
@@ -1896,7 +1926,6 @@
     @media (max-width: toEm(820.98)){
       background-position: top;
     }
-    @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
     @media (min-width:toEm(1366.98)){
       grid-template-columns: repeat(3, 1fr);
     }
@@ -1906,9 +1935,10 @@
   }
   // .services__item
   &__item {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     padding: toRem(30);
     @include adaptiveValue("padding", 30, 20,0,1920,1440);
-    border-radius: toRem(20);
     border: 2px solid rgba(61, 162, 255, 0.50);
     background: rgba(255, 255, 255, 0.70);
     backdrop-filter: blur(20px);
@@ -2085,7 +2115,8 @@
 		}
 		// .article-hero__body
 		&__body {
-      display: grid;
+      @extend %grid;
+      // display: grid;
       @media (min-width:toEm(600.98)){
         grid-template-columns: 1fr 1fr;
       }
@@ -2164,8 +2195,10 @@
 }
 
 .art-imgs {
-  display: grid;
-  @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
+  @extend %grid;
+  // display: grid;
+  @extend %gap20-10;
+  // @include adaptiveValue("gap", 20, 10,0,1920,1366.98);
   
   @media (min-width:toEm(600.98)){
     grid-template-columns: repeat(4,1fr);
@@ -2177,7 +2210,8 @@
 
 
 .list-result {
-  display: grid;
+  @extend %grid;
+  // display: grid;
   @media (min-width:toEm(550.98)){
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2194,8 +2228,9 @@
      grid-template-columns: 1fr; 
   }
   li {
+    @extend %brRad20;
+    // border-radius: toRem(20);
     list-style: none !important;
-    border-radius: toRem(20);
     background-color: #fff;
     text-align: center;
     padding-left: toRem(10);
